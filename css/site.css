@@ -19,6 +19,26 @@ body {
     font-family: 'Noto sans JP', 'Roboto', sans-serif;
     font-weight: 200;
     scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+body {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    grid-template-columns: auto;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+footer {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
 }
 
 html {
@@ -44,16 +64,40 @@ html {
     font-size: 1.1em;
 }
 
+.nav-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
 /* frame common settings */
 .frame {
+    width: 100%;
+    position: absolute;
+    background-color: var(--primary-bg-color);
+    top: 0;
+    left: 0;
     height: 100%;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr auto 1fr;
     padding: 8px;
+    transition: opacity 0.5s ease-in-out;
+    visibility: hidden;
 }
 
 /* first frame */
+.first-frame {
+    visibility: visible;
+}
 
 .first-frame .top {
     display: flex;
