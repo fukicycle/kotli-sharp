@@ -9,6 +9,7 @@
   <meta name="keyword" content="Portfolio, Kotlin, C#, KotliSharp, Java, プログラミング, 初心者" />
   <meta name="google-site-verification" content="SlP8Dh9YIuonkQPaCRWfxXZx_namLdJ7GGoi-30FF2o" />
   <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/carousel.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -47,9 +48,96 @@
         <span class="h1">プロジェクト達</span>
       </div>
       <div class="center">
-        <div class="card">
-          <p class="h2">English Master</p>
+        <!-- carousel -->
+        <div class="carousel">
+          <!-- スライドのリスト -->
+          <div class="contains">
+            <!-- スライドを選択するためのラジオボタンリスト。 -->
+            <!-- 数は増減しても構わないです。 最初は1番目を選択状態(checked)にします。-->
+            <!-- Slide各ラジオボタンに個別のidを定義して、nameはすべて同じ値にします。 -->
+            <input class="slide_select" type="radio" id="SlideA" name="slide_check" checked />
+            <input class="slide_select" type="radio" id="SlideB" name="slide_check" />
+            <input class="slide_select" type="radio" id="SlideC" name="slide_check" />
+            <input class="slide_select" type="radio" id="SlideD" name="slide_check" />
+            <!-- スライド -->
+            <!-- 上のラジオボックスと同じ数だけ記述します。-->
+            <div class="slide">
+              <!-- スライドの内容（ここでは画像）を記述します。 -->
+              <!-- div要素に変えれば文字を加えることもできます。 -->
+              <div>
+                <div class="card">
+                  <div class="img">
+                    <img src="imgs/pngs/no-images.png" />
+                  </div>
+                  <p class="h2">English Master</p>
+                  <p class="description">英語学習アプリ。ランダムに出題される英単語の意味を４択で回答していく学習アプリ。継続学習によってアプリ内の木を成長させることができる。</p>
+                  <div class="tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">Blazor</span>
+                    <span class="tag">wasm</span>
+                    <span class="tag">english</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- スライド（2番目）内容は1個めと同じ -->
+            <div class="slide">
+              <div>
+                <div class="card">
+                  <div class="img">
+                    <img src="imgs/pngs/no-images.png" />
+                  </div>
+                  <p class="h2">べじろぐ</p>
+                  <p class="description">家庭菜園記録アプリ。毎日野菜たちの様子を撮影して日々の成長を確認することができる。共有コードを利用すると複数人で内容を共有することができる。</p>
+                  <div class="tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">Blazor</span>
+                    <span class="tag">wasm</span>
+                    <span class="tag">vegetable</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- スライド（3番目）内容は1個めと同じ -->
+            <div class="slide">
+              <div class="card">
+                <div class="img">
+                  <img src="imgs/pngs/no-images.png" />
+                </div>
+                <p class="h2">Stawa</p>
+                <p class="description">技能五輪訓練で利用するWebシステム。標準作業と呼ばれるものの実施記録や内容を管理しているアプリ。</p>
+                <div class="tags">
+                  <span class="tag">C#</span>
+                  <span class="tag">Blazor</span>
+                  <span class="tag">wasm</span>
+                  <span class="tag">standard</span>
+                  <span class="tag">skill</span>
+                </div>
+              </div>
+            </div>
+            <div class="move_controler">
+              <!-- 1個目のスライドのボタン -->
+              <!-- 一番上のラジオボタンの1個目のスライドのid”A”をforに定義します-->
+              <label class="button_move" for="SlideA"></label>
+              <label class="button_move" for="SlideB"></label>
+              <label class="button_move" for="SlideC"></label>
+            </div>
+          </div>
         </div>
+        <!-- END OF carousel -->
+        <!-- <div class=" card">
+          <div class="img">
+            <img src="imgs/pngs/no-images.png" />
+          </div>
+          <p class="h2">English Master</p>
+          <p class="description">英語学習アプリ。ランダムに出題される英単語の意味を４択で回答していく学習アプリ。継続学習によってアプリ内の木を成長させることができる。</p>
+          <div class="tags">
+            <span class="tag">C#</span>
+            <span class="tag">Blazor</span>
+            <span class="tag">wasm</span>
+            <span class="tag">english</span>
+          </div>
+        </div> -->
       </div>
       <div class="bottom">
       </div>
@@ -76,9 +164,6 @@
       <img src="imgs/svgs/top_arrow.svg" alt="top arrow" />
     </button>
   </div>
-  <footer>
-    <p>&copy; 2024 kotli-sharp @fukicycle</p>
-  </footer>
   <script src="js/kotli.js"></script>
 </body>
 
